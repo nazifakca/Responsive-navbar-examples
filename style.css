@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #344e52;
+}
+
+/* navbar 1*/
+.navbar {
+    background-color: #282A35;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: #8cec50;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 999;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: .5s;
+    border: 1px solid #8cec50;
+}
+
+.menu a:hover {
+    color: #282A35;
+    background-color: #8cec50;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #282A35;
+    }
+
+    .menu a {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border: none;
+        border-top: 1px solid #8cec50 !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+/* navbar 2 */
+.navbar2 {
+    background-color: #2b1a06;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.brand2 {
+    color: #e6ff6c;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 999;
+}
+
+.menu2 a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 14px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: .5s;
+    display: inline-block; 
+    position: relative;
+    z-index: 1;
+}
+
+.menu2 a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: .5s;
+    transform: scaleY(0);
+}
+
+.menu2 a:hover{
+    color: #2b1a06;
+}
+
+.menu2 a:hover::after{
+    z-index: -1;
+    transform: scaleY(1);
+    background-color:#e6ff6c;
+}
+
+.menu-toggle2 {
+    display: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .menu2 {
+        display: none;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        position: absolute;
+        flex-direction: column;
+        background-color: #2b1a06;
+    }
+    
+    .menu2 a{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #e6ff6c !important;
+    }
+
+    .menu-toggle2 {
+        display: block;
+    }
+
+    .menu2.show {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* navbar 3 */
+.navbar3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #ffffff00 0%, #ffffff33 25%, #ffffff33 75%, #ffffff00 100%);
+    box-shadow: 0 0 25px #0000001a, inset 0 0 1px #ffffff99;
+}
+
+.menu3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu3 a{
+    color: #ffffff99;
+    text-decoration: none;
+    padding: 20px 25px;
+    transition: .5s;
+    display: inline-block; 
+    position: relative;
+    cursor: pointer;
+}
+
+.menu3 a:hover{
+    box-shadow: 0 0 10px #0000001a, inset 0 0 1px #ffffff99;
+    background: #ffffff1a;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .menu3 a{
+        padding: 20px 15px;
+    }
+}
+
+/* navbar 4 */
+.navbar4{
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.menu4{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu4 a{
+    color: #282A35;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block; 
+    position: relative;
+}
+
+.menu4 a:hover{
+    color: #df1818;
+}
+
+.menu4 a:first-child{
+    color: #df1818;
+}
+
+.menu4 a:first-child::after{
+    width: 100%;
+}
+
+.menu4 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    transition: 0.3s ease;
+    background-color: #df1818;
+}
+
+.menu4 a:hover::after {
+    width: 100%;
+}
